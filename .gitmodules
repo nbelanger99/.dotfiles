@@ -1,0 +1,6 @@
+[submodule ".config/alacritty/alacritty-theme"]
+	path = .config/alacritty/alacritty-theme
+	url = https://github.com/alacritty/alacritty-theme.git
+[submodule ".config/nvim/pack/nvim/start/nvim-lspconfig"]
+	path = .config/nvim/pack/nvim/start/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig.git
