@@ -1,0 +1,36 @@
+[submodule ".config/alacritty/alacritty-theme"]
+	path = .config/alacritty/alacritty-theme
+	url = https://github.com/alacritty/alacritty-theme.git
+[submodule ".config/nvim/pack/nvim/start/nvim-lspconfig"]
+	path = .config/nvim/pack/nvim/start/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig.git
+[submodule ".config/nvim/pack/nvim/start/nvim-treesitter"]
+	path = .config/nvim/pack/nvim/start/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter.git
+[submodule ".config/nvim/pack/nvim/start/nvim"]
+	path = .config/nvim/pack/nvim/start/nvim
+	url = https://github.com/catppuccin/nvim.git
+[submodule ".config/tmux/plugins/tmux"]
+	path = .config/tmux/plugins/tmux
+	url = https://github.com/catppuccin/tmux.git
+[submodule ".fzf"]
+  path = .fzf
+  url = https://github.com/junegunn/fzf.git
+[submodule ".config/nvim/pack/nvim/start/telescope.nvim"]
+	path = .config/nvim/pack/nvim/start/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim.git
+[submodule ".config/nvim/pack/nvim/start/plenary.nvim"]
+	path = .config/nvim/pack/nvim/start/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim.git
+[submodule ".config/nvim/pack/nvim/start/telescope.nvim"]
+	path = .config/nvim/pack/nvim/start/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim.git
+[submodule "bash-it"]
+	path = bash-it
+	url = https://github.com/nbelanger99/bash-it.git
+[submodule ".config/nvim/pack/nvim/start/lsp_lines.nvim"]
+	path = .config/nvim/pack/nvim/start/lsp_lines.nvim
+	url = https://git.sr.ht/~whynothugo/lsp_lines.nvim
+[submodule ".config/nvim/pack/nvim/start/neogen"]
+	path = .config/nvim/pack/nvim/start/neogen
+	url = https://github.com/danymat/neogen.git
