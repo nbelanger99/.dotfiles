@@ -4,3 +4,12 @@
 [submodule ".config/nvim/pack/nvim/start/nvim-lspconfig"]
 	path = .config/nvim/pack/nvim/start/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig.git
+[submodule "bash-it"]
+	path = bash-it
+	url = git@github.com:nbelanger99/bash-it.git
+[submodule ".config/nvim/pack/nvim/start/nvim-treesitter"]
+	path = .config/nvim/pack/nvim/start/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter.git
+[submodule ".config/nvim/pack/nvim/start/nvim"]
+	path = .config/nvim/pack/nvim/start/nvim
+	url = https://github.com/catppuccin/nvim.git

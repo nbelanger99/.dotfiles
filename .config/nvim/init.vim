@@ -1,9 +1,0 @@
-set number
-set expandtab
-set tabstop=2
-set shiftwidth=2
-set colorcolumn=80
-set cursorline
-set ignorecase
-set mouse=a
-set autoread
