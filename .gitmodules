@@ -13,3 +13,6 @@
 [submodule ".config/nvim/pack/nvim/start/nvim"]
 	path = .config/nvim/pack/nvim/start/nvim
 	url = https://github.com/catppuccin/nvim.git
+[submodule ".config/tmux/plugins/tmux"]
+	path = .config/tmux/plugins/tmux
+	url = https://github.com/catppuccin/tmux.git

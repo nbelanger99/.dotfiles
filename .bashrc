@@ -122,6 +122,22 @@ export EDITOR=nvim
 export TERM=tmux-256color
 
 export PATH=$PATH:~/.local/bin
+
+eval "$(ssh-agent -s)"
+# ssh-add ~/.ssh/*.pub
+find ~/.ssh -maxdepth 1 -type f -name "id_rsa*.pub" ! -name "*.pub" -exec ssh-add {} \;
+
+set -o vi
+
+### Fzf catppuccin
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+--color=selected-bg:#45475a \
+--multi"
+
+
 ###### bash_it stuff #####
 ##########################
 
@@ -133,7 +149,7 @@ esac
 
 
 # Path to the bash it configuration
-export BASH_IT='/home/nick/.bash_it'
+export BASH_IT="${HOME}/bash-it"
 
 # Lock and Load a custom theme file.
 # Leave empty to disable theming.
@@ -208,3 +224,5 @@ export SCM_CHECK=true
 
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
