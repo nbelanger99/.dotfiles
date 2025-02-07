@@ -40,7 +40,7 @@ vim.treesitter.language.register("cpp", "sm")
 
 -- Color theme
 require("catppuccin").setup({
-    flavour = "macchiato",
+    flavour = os.getenv("CATPPUCCIN_FLAVOR"),
     transparent_background=true
 })
 
