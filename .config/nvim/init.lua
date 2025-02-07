@@ -13,9 +13,18 @@ vim.opt.ignorecase = true
 vim.opt.mouse = a
 vim.autoread = true
 
+vim.filetype.add({
+  extension = {
+    sm = "cpp"
+  }
+})
+
 
 -- Language Support
-require'lspconfig'.clangd.setup{}
+require'lspconfig'.clangd.setup{
+  filetypes = {"c", "cpp", "objc", "objcpp", "sm"}
+}
+
 require'nvim-treesitter.configs'.setup{
   highlight = {
     enable = true,
@@ -26,6 +35,8 @@ require'nvim-treesitter.configs'.setup{
     additional_vim_regex_highlighting = false,
   },
 }
+
+vim.treesitter.language.register("cpp", "sm")
 
 -- Color theme
 require("catppuccin").setup({
