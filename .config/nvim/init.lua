@@ -22,8 +22,12 @@ vim.filetype.add({
 
 -- Language Support
 require'lspconfig'.clangd.setup{
+  cmd = {"/opt/dclangd"},
   filetypes = {"c", "cpp", "objc", "objcpp", "sm"}
 }
+
+vim.opt.signcolumn = 'yes' -- auto/yes/no
+vim.diagnostic.config({ virtual_text = true })
 
 require'nvim-treesitter.configs'.setup{
   highlight = {
