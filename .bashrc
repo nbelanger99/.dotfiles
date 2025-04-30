@@ -129,6 +129,8 @@ find ~/.ssh -maxdepth 1 -type f -name "id_rsa*.pub" ! -name "*.pub" -exec ssh-ad
 
 set -o vi
 
+export CATPPUCCIN_FLAVOR=mocha
+
 source ~/.fzf_opts.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
@@ -142,7 +144,6 @@ case $- in
     *) return;;
 esac
 
-export CATPPUCCIN_FLAVOR=frappe
 
 # Path to the bash it configuration
 export BASH_IT="${HOME}/bash-it"
