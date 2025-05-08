@@ -28,3 +28,6 @@
 [submodule "bash-it"]
 	path = bash-it
 	url = https://github.com/nbelanger99/bash-it.git
+[submodule ".config/nvim/pack/nvim/start/lsp_lines.nvim"]
+	path = .config/nvim/pack/nvim/start/lsp_lines.nvim
+	url = https://git.sr.ht/~whynothugo/lsp_lines.nvim

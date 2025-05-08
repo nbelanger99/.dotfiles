@@ -31,9 +31,13 @@ require'lspconfig'.clangd.setup{
 require'lspconfig'.pyright.setup{}
 
 vim.opt.signcolumn = 'yes' -- auto/yes/no
-vim.diagnostic.config({ virtual_text = true })
-vim.diagnostic.open_float()
 
+require'lsp_lines'.setup{}
+
+vim.diagnostic.config({
+  virtual_text=false,
+  virtual_lines = { only_current_line = true }
+})
 
 require'nvim-treesitter.configs'.setup{
   highlight = {
