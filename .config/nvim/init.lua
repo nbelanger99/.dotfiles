@@ -17,9 +17,16 @@ vim.opt.splitbelow = true
 
 vim.filetype.add({
   extension = {
-    sm = "cpp"
+    sm = "cpp",
+    dox = "doxygen"
+  },
+  filename = {
+    ["Jenkinsfile"] = "groovy",
+    ["plugin.txt"] = "ruby",
   }
 })
+
+vim.g.load_doxygen_syntax = 1
 
 
 -- Language Support
@@ -28,7 +35,13 @@ require'lspconfig'.clangd.setup{
   filetypes = {"c", "cpp", "objc", "objcpp", "sm"},
 }
 
-require'lspconfig'.pyright.setup{}
+require'lspconfig'.pyright.setup{
+  enabled=true,
+  languages = {
+    ['cpp.doxygen'] = require('neogen.configurations.cpp'),
+    ['c.doxygen'] = require('neogen.configurations.cpp'),
+  }
+}
 
 vim.opt.signcolumn = 'yes' -- auto/yes/no
 
@@ -38,6 +51,8 @@ vim.diagnostic.config({
   virtual_text=false,
   virtual_lines = { only_current_line = true }
 })
+
+require('neogen').setup {}
 
 require'nvim-treesitter.configs'.setup{
   highlight = {
@@ -68,14 +83,10 @@ require('telescope').setup{
     }
   },
   pickers = {
-    -- Default configuration for builtin pickers goes here:
-    -- picker_name = {
-    --   picker_config_key = value,
-
-    --   ...
-    -- }
-    -- Now the picker_config_key will be applied every time you call this
-    -- builtin picker
+    find_files = {
+      no_ignore = true,
+      hidden = true, -- optional, but you probably want this too
+    },
   },
   extensions = {
     -- Your extension configuration goes here:

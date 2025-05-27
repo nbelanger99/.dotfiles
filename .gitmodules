@@ -31,3 +31,6 @@
 [submodule ".config/nvim/pack/nvim/start/lsp_lines.nvim"]
 	path = .config/nvim/pack/nvim/start/lsp_lines.nvim
 	url = https://git.sr.ht/~whynothugo/lsp_lines.nvim
+[submodule ".config/nvim/pack/nvim/start/neogen"]
+	path = .config/nvim/pack/nvim/start/neogen
+	url = https://github.com/danymat/neogen.git
