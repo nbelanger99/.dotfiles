@@ -17,12 +17,12 @@ vim.opt.splitbelow = true
 
 vim.filetype.add({
   extension = {
-    sm = "cpp",
-    dox = "doxygen"
+    sm = 'cpp',
+    dox = 'cpp'
   },
   filename = {
-    ["Jenkinsfile"] = "groovy",
-    ["plugin.txt"] = "ruby",
+    ['Jenkinsfile'] = 'groovy',
+    ['plugin.txt'] = 'ruby',
   }
 })
 
@@ -31,16 +31,12 @@ vim.g.load_doxygen_syntax = 1
 
 -- Language Support
 require'lspconfig'.clangd.setup{
-  cmd = {"/opt/dclangd"},
-  filetypes = {"c", "cpp", "objc", "objcpp", "sm"},
+  cmd = {'/opt/dclangd'},
+  filetypes = {'c', 'cpp', 'objc', 'objcpp', 'sm', 'doxygen'},
 }
 
 require'lspconfig'.pyright.setup{
   enabled=true,
-  languages = {
-    ['cpp.doxygen'] = require('neogen.configurations.cpp'),
-    ['c.doxygen'] = require('neogen.configurations.cpp'),
-  }
 }
 
 vim.opt.signcolumn = 'yes' -- auto/yes/no
@@ -52,7 +48,13 @@ vim.diagnostic.config({
   virtual_lines = { only_current_line = true }
 })
 
-require('neogen').setup {}
+require('neogen').setup {
+  languages = {
+    ['cpp.doxygen'] = require('neogen.configurations.cpp'),
+    ['c.doxygen'] = require('neogen.configurations.cpp'),
+    ['doxygen'] = require('neogen.configurations.cpp'),
+  }
+}
 
 require'nvim-treesitter.configs'.setup{
   highlight = {
@@ -65,7 +67,7 @@ require'nvim-treesitter.configs'.setup{
   },
 }
 
-vim.treesitter.language.register("cpp", "sm")
+vim.treesitter.language.register('cpp', 'sm')
 
 require('telescope').setup{
   defaults = {
@@ -77,7 +79,7 @@ require('telescope').setup{
         -- map actions.which_key to <C-h> (default: <C-/>)
         -- actions.which_key shows the mappings for your picker,
         -- e.g. git_{create, delete, ...}_branch for the git_branches picker
-        ["<C-h>"] = "which_key"
+        ['<C-h>'] = 'which_key'
 
       }
     }
@@ -98,10 +100,10 @@ require('telescope').setup{
 }
 
 -- Color theme
-require("catppuccin").setup({
-    flavour = os.getenv("CATPPUCCIN_FLAVOR"),
+require('catppuccin').setup({
+    flavour = os.getenv('CATPPUCCIN_FLAVOR'),
     transparent_background=true
 })
 
--- vim.cmd.colorscheme "catppuccin-mocha"
-vim.cmd.colorscheme "catppuccin"
+-- vim.cmd.colorscheme 'catppuccin-mocha'
+vim.cmd.colorscheme 'catppuccin'
