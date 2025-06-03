@@ -129,7 +129,7 @@ find ~/.ssh -maxdepth 1 -type f -name "id_rsa*.pub" ! -name "*.pub" -exec ssh-ad
 
 set -o vi
 
-export CATPPUCCIN_FLAVOR=mocha
+export CATPPUCCIN_FLAVOR=latte
 
 source ~/.fzf_opts.sh
 
