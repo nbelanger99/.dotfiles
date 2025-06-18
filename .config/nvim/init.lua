@@ -39,6 +39,8 @@ require'lspconfig'.pyright.setup{
   enabled=true,
 }
 
+require'lspconfig'.rust_analyzer.setup{}
+
 vim.opt.signcolumn = 'yes' -- auto/yes/no
 
 require'lsp_lines'.setup{}

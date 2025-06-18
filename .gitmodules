@@ -34,3 +34,6 @@
 [submodule ".config/nvim/pack/nvim/start/neogen"]
 	path = .config/nvim/pack/nvim/start/neogen
 	url = https://github.com/danymat/neogen.git
+[submodule ".local/share/konsole"]
+	path = .local/share/konsole
+	url = https://github.com/catppuccin/konsole.git
