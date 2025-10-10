@@ -3,6 +3,7 @@ alias vim="nvim"
 alias ls="lsd"
 alias tree="lsd --tree"
 # alias man='man "$@" | nvim -R +":set ft=man" - '
+alias man='MANPAGER="nvim +Man!" man'
 
 # Git stuff
 alias past="git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
