@@ -34,3 +34,6 @@
 [submodule ".config/nvim/pack/nvim/start/neogen"]
 	path = .config/nvim/pack/nvim/start/neogen
 	url = https://github.com/danymat/neogen.git
+[submodule ".config/nvim/pack/nvim/start/Comment.nvim"]
+	path = .config/nvim/pack/nvim/start/Comment.nvim
+	url = https://github.com/numToStr/Comment.nvim.git

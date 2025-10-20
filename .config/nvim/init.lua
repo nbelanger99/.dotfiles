@@ -110,6 +110,18 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live gr
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
+-- Commenter
+require('Comment').setup {
+  toggler = {
+    line  = '<leader>/',  -- Toggle line comment
+    block = '<leader>?',  -- Toggle block comment
+  },
+  opleader = {
+    line  = '<leader>/',  -- Comment line(s) in normal/visual mode
+    block = '<leader>?',  -- Block comment in normal/visual mode
+  },
+}
+
 -- Color theme
 require('catppuccin').setup({
     flavour = os.getenv('CATPPUCCIN_FLAVOR'),
