@@ -105,6 +105,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Un-tracked file for machine specifics
+if [ -f ~/.bash_custom ]; then
+    . ~/.bash_custom
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -128,8 +133,6 @@ eval "$(ssh-agent -s)"
 find ~/.ssh -maxdepth 1 -type f -name "id_rsa*.pub" ! -name "*.pub" -exec ssh-add {} \;
 
 set -o vi
-
-export CATPPUCCIN_FLAVOR=mocha
 
 source ~/.fzf_opts.sh
 

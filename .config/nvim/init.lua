@@ -17,6 +17,8 @@ vim.opt.mouse = a
 vim.autoread = true
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+vim.opt.laststatus=3
+vim.opt.winbar='%f'
 
 vim.filetype.add({
   extension = {
